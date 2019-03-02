@@ -1,5 +1,7 @@
 package com.xlipstudio.cleanthescreen.communication;
 
+import com.xlipstudio.cleanthescreen.communication.request.Request;
+import com.xlipstudio.cleanthescreen.communication.response.Response;
 import com.xlipstudio.cleanthescreen.communication.sub.WrapType;
 
 import java.io.Serializable;
@@ -9,15 +11,27 @@ public class Wrap implements Serializable {
     private static final long serialVersionUID = -5255958368837732554L;
 
     private WrapType wrapType;
-    private String payload;
+    private Request request;
+    private Response response;
 
 
-    public String getPayload() {
-        return payload;
+
+
+    public Wrap(Response response, WrapType wrapType) {
+        this.response = response;
+        this.wrapType = wrapType;
     }
 
-    public void setPayload(String payload) {
-        this.payload = payload;
+    public Wrap() {
+    }
+
+
+    public Response getResponse() {
+        return response;
+    }
+
+    public void setResponse(Response response) {
+        this.response = response;
     }
 
     public WrapType getWrapType() {
@@ -26,5 +40,13 @@ public class Wrap implements Serializable {
 
     public void setWrapType(WrapType wrapType) {
         this.wrapType = wrapType;
+    }
+
+    public Request getRequest() {
+        return request;
+    }
+
+    public void setRequest(Request request) {
+        this.request = request;
     }
 }

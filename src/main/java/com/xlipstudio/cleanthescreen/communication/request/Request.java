@@ -1,0 +1,28 @@
+package com.xlipstudio.cleanthescreen.communication.request;
+
+import java.io.Serializable;
+
+public class Request implements Serializable {
+
+    private static final long serialVersionUID = -3249127851416559292L;
+
+
+    private RequestType requestType;
+    private Object payload;
+
+    public RequestType getRequestType() {
+        return requestType;
+    }
+
+    public void setRequestType(RequestType requestType) {
+        this.requestType = requestType;
+    }
+
+    public Object getPayload() {
+        return payload;
+    }
+
+    public void setPayload(Object payload) {
+        this.payload = payload;
+    }
+}
