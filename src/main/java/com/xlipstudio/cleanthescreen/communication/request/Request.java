@@ -10,6 +10,14 @@ public class Request implements Serializable {
     private RequestType requestType;
     private Object payload;
 
+    public Request(RequestType requestType, Object payload) {
+        this.requestType = requestType;
+        this.payload = payload;
+    }
+
+    public Request() {
+    }
+
     public RequestType getRequestType() {
         return requestType;
     }

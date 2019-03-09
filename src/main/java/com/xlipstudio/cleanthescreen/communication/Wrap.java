@@ -17,9 +17,14 @@ public class Wrap implements Serializable {
 
 
 
-    public Wrap(Response response, WrapType wrapType) {
+    public Wrap( WrapType wrapType, Response response) {
         this.response = response;
         this.wrapType = wrapType;
+    }
+
+    public Wrap(WrapType wrapType, Request request) {
+        this.wrapType = wrapType;
+        this.request = request;
     }
 
     public Wrap() {
