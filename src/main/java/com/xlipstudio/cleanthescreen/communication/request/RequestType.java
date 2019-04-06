@@ -5,6 +5,7 @@ public enum RequestType {
     GO,
     CANCEL,
     EXIT,
-    DELETE_CELL
+    DELETE_CELL,
+    HEARTH_BEAT
 
 }
